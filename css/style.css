@@ -1,0 +1,238 @@
+/* @font-face {
+  font-family: 'Bio Sans' !important;
+  src: url('../fonts/BioSans-Regular.otf') !important;
+} */
+
+@font-face {
+  font-family: myFirstFont;
+  src: url("../fonts/BioSans-Regular.otf");
+}
+
+
+body {
+    font-family: myFirstFont !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    
+}
+
+.modal{
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 10; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100vw; /* Full width */
+  height: 100vh; /* Full height */
+  overflow: hidden !important; /* Enable scroll if needed */
+  background: rgba(0, 0, 0, 0.1) !important;
+  backdrop-filter: blur(10px) !important;
+}
+
+.loader-container{
+  width: 100vw !important;
+  height: 100vh !important;
+  position: fixed !important;
+  z-index: 10000 !important;
+  display: flex;
+  justify-content: center !important;
+  align-items: center !important;
+}
+.loader {
+  border: 16px solid #f3f3f3; /* Light grey */
+  border-top: 16px solid #EFAC9E;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  animation: spin 2s linear infinite;
+}
+
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.payment-wrapper {
+  width: 480px;
+  height: auto;
+  border-radius: 6px;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  background: #fff;
+  
+}
+
+.payment-container {
+  width: 100vw !important;
+  height: 100vh !important;
+  position: absolute !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+.head-wrap {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  padding-left: 24px !important;
+  padding-right: 24px !important;
+  padding-bottom: 16px !important;
+  padding-top: 16px !important;
+  height: 64px !important;
+}
+
+.logo {
+  width: 71px !important;
+  height: 20px !important;
+}
+
+.detail {
+  text-align: right !important;
+  color: #a2a0a0 !important;
+  margin:0 !important;
+  font-size: 16px !important;
+}
+
+#payment .payment_methods li p {
+  margin: 0 !important;
+}
+
+.divider {
+  margin: 0;
+  border-top: 2px solid #EFAC9E !important;
+  width: 100% !important;
+}
+
+.section {
+  padding-top: 16px;
+  padding-bottom: 16px;
+  margin-bottom: 16px;
+}
+
+.form-wrapper {
+  padding-left: 32px;
+  padding-right: 32px;
+}
+
+.text-box {
+  margin-top: 16px;
+  background: #F5F5F5 !important;
+  border: none;
+  border-radius: 12px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  box-sizing: border-box;
+  height: 74px;
+}
+.text-box-half {
+  margin-top: 16px;
+  background: #F5F5F5;
+  border: none;
+  border-radius: 12px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  box-sizing: border-box;
+  height: 74px;
+  width: 43%;
+}
+
+.text-info {
+  width: 100%;
+  height: 24px;
+  padding-left: 16px;
+  box-sizing: border-box;
+  color: #4a5568;
+  font-size: 0.875rem;
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+}
+
+.credit-box {
+  width: 100% !important;
+  height: 30px !important;
+  line-height: 1.25rem !important;
+  background: #F5F5F5 !important;
+  border: none !important;
+  padding: 8px 16px !important;
+  box-sizing: border-box !important;
+  font-size: 16px !important;
+  font-weight: bold !important;
+  color: #a2a0a0 !important;
+  border-radius: 12px !important;
+  box-shadow: none !important;
+}
+
+.input::placeholder {
+ color: #a2a0a0 !important;
+}
+
+input.middle:focus {
+  outline-width: 0 !important;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+div:focus,
+button:focus {
+    outline: none !important;
+}
+
+.half-input-flex {
+  display: flex !important;
+  justify-content: space-between !important;
+}
+
+.form-footer {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 16px 32px;
+  box-sizing: border-box;
+}
+
+.cancel-btn {
+  padding: 10px !important;
+  border: none !important;
+  background: #EFAC9E !important;
+  color: #CA3941 !important;
+  margin-right: 15px !important;
+  border-radius: 8px !important;
+  font-weight: bold !important;
+  font-size: 16px !important;
+  cursor: pointer !important;
+}
+.pay-btn {
+  padding: 10px 24px !important;
+  border: none !important;
+  background: #CA3941 !important;
+  color: #ffffff !important;
+  border-radius: 8px !important;
+  font-weight: bold !important;
+  font-size: 16px !important;
+  cursor: pointer !important;
+}
+
+.woocommerce #payment .payment_methods.methods label{
+ justify-content: space-between;
+ display:inline;
+ align-items: center;
+}
+
+.woocommerce #payment .payment_methods.methods label[for="payment_method_klasha"] img{
+  max-width: 230px;
+  max-height: 95px;
+  width: auto;
+  height: 32px;
+  display: inline !important;
+}
+
+label[for="payment_method_klasha"] {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  align-items: center !important;
+}
